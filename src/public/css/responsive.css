@@ -1,0 +1,18 @@
+@media (max-width: 1023px) {
+  .sidebar {
+    width: 200px;
+    display: none;
+  }
+
+  .wrapper {
+    padding-left: 0;
+  }
+  .wrapper .header {
+    left: 0;
+  }
+  .wrapper .footer {
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

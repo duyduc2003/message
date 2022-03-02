@@ -156,9 +156,13 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  max-width: 860px;
+  overflow: hidden;
 }
 .wrapper .container .list-message .item-message .box-message .wrap-message .content-message {
   font-size: 1.5rem;
+  max-width: 860px;
+  display: block;
 }
 .wrapper .container .list-message .item-message .box-message .wrap-message .content-message.connected {
   font-size: 1.3rem;

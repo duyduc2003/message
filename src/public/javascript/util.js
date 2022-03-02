@@ -32,24 +32,25 @@ const checkUser = (nameUser, listMessage, isConnect = true) => {
     window.scrollTo(0, document.body.scrollHeight);
 }
 
-const listUserOnline = (nameUser, listUser) => {
-    const li = document.createElement('li');
-    li.classList.add('item-user');
-    const html = `
-    <div class="wrap-img-user">
-        <div class="img-user">
-            <div class="avt-user" style="background-image: url('/img/img-ground.png');"></div>
-        </div>
-    </div>
-    <div class="user-name-state">
-        <h4 class="user-name">${nameUser}</h4>
-        <div class="user-state">
-            <p>Online</p>
-        </div>
-    </div>
-    `
-    li.innerHTML = html;
-    listUser.appendChild(li);
+const listUserOnline = (dataUser, listUser) => {
+    const html = dataUser.map(aUser => {
+        return  `
+        <li class="item-user">
+            <div class="wrap-img-user">
+                <div class="img-user">
+                    <div class="avt-user" style="background-image: url('/img/img-ground.png');"></div>
+                </div>
+            </div>
+            <div class="user-name-state">
+                <h4 class="user-name">${aUser}</h4>
+                <div class="user-state">
+                    <p>Online</p>
+                </div>
+            </div>
+        </li>
+        `
+    })
+    listUser.innerHTML = html.join('');
 }
 
 export {

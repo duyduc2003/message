@@ -98,6 +98,7 @@ body {
 .wrapper {
     padding-left: $width-sidebar;
 
+
     .header {
         position: fixed;
         top: 0;
@@ -192,9 +193,15 @@ body {
                         border-top-right-radius: 20px;
                         border-bottom-right-radius: 20px;
                         border-bottom-left-radius: 20px;
+                        max-width: $width-mess;
+                        overflow: hidden;
+
 
                         .content-message {
                             font-size: 1.5rem;
+                            max-width: $width-mess;
+                            display: block;
+
 
                             &.connected {
                                 font-size: 1.3rem;

@@ -9,14 +9,13 @@ const chatInput = $('.chat-input');
 const listMessage = $('.list-message');
 const btnSend = $('.btn-send');
 
-console.log(listMessage)
 
 const socket = io();
 
 // todo - Handle DOM events
 let userName
 do {
-    userName = prompt('Enter your name: ');
+    userName = prompt('Nhập Tên Của Bạn (Đừng Để Trống)');
 } while (!userName);
 
 formInput.addEventListener('submit', e => {
@@ -64,13 +63,14 @@ socket.on('chat-message', function (data) {
     window.scrollTo(0, document.body.scrollHeight);
 });
 
-socket.on('user-connect', nameUser => {
-    checkUser(nameUser, listMessage);
-    listUserOnline(nameUser, listUser)
+socket.on('user-connect', (data) => {
+    checkUser(data.name, listMessage);
+    listUserOnline(data.userConnect, listUser)
     chatInput.value = '';
 })
 
-socket.on('user-disconnect', nameUser => {
-    checkUser(nameUser, listMessage, false);
+socket.on('user-disconnect', data => {
+    checkUser(data.name, listMessage, false);
+    listUserOnline(data.userConnect, listUser)
     chatInput.value = '';
 })

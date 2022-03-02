@@ -1,0 +1,25 @@
+@media   (max-width: 1023px) {
+    $width-sidebar: 200px;
+    $height-header: 75px;
+    $width-mess: 860px;
+
+    .sidebar {
+        width: $width-sidebar;
+        display: none;
+
+    }
+
+    .wrapper {
+        padding-left:0;
+
+        .header {
+            left: 0;
+        }
+        .footer {
+           
+            left: 0;
+           
+        }
+
+    }
+}
