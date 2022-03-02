@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+}
+
+.app {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 360px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+.wrapper {
+  padding-left: 360px;
+}
+.wrapper .header {
+  position: fixed;
+  top: 0;
+  left: 360px;
+  right: 0;
+  height: 75px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.wrapper .header .img-ground {
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper .header .img-ground .avt-ground {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .container {
+  padding-top: 75px;
+}
+.wrapper .container .start-message {
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.wrapper .container .start-message .img-ground {
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper .container .start-message .img-ground .avt-ground {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .container .start-message .ground-name {
+  padding-top: 8px;
+}
+.wrapper .container .list-message {
+  padding: 50px 20px 70px;
+  list-style: none;
+}
+.wrapper .container .list-message .item-message {
+  display: flex;
+  margin-bottom: 20px;
+}
+.wrapper .container .list-message .item-message .img-user {
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper .container .list-message .item-message .img-user .avt-user {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .container .list-message .item-message .box-message {
+  margin-left: 20px;
+}
+.wrapper .container .list-message .item-message .box-message .user-name {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+.wrapper .container .list-message .item-message .box-message .wrap-message {
+  background-color: #e4e6eb;
+  padding: 8px 12px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.wrapper .container .list-message .item-message .box-message .wrap-message .content-message {
+  font-size: 1.5rem;
+}
+.wrapper .footer {
+  position: fixed;
+  bottom: 0;
+  left: 360px;
+  right: 0;
+  background-color: #fff;
+  padding: 15px;
+}
+.wrapper .footer .form-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrapper .footer .form-input .chat-input {
+  width: 100%;
+  height: 38px;
+  border: none;
+  outline: none;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  transition: all linear 0.1s;
+}
+.wrapper .footer .form-input .btn-send {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px 6px;
+  display: none;
+}
+.wrapper .footer .form-input .btn-send:active {
+  opacity: 0.8;
+}
+.wrapper .footer .form-input .btn-send > i {
+  font-size: 2rem;
+  color: #0084ff;
+  user-select: none;
+}
+
+/*# sourceMappingURL=app.css.map */
