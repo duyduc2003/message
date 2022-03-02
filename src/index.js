@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+
 io.on('connection', (socket) => {
   console.log('connected');
   let user = {};
@@ -32,8 +33,6 @@ io.on('connection', (socket) => {
     console.log(user.userName + ' disconnected');
     io.emit('user-disconnect', user.userName)
   });
-
-
 });
 
 

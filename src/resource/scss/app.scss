@@ -34,6 +34,65 @@ body {
 
     background-color: $c-white;
     border-right: 1px solid #ccc;
+
+    .sidebar-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+
+        >h3 {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-right: 6px;
+        }
+
+        >i {
+            color: #53ca53;
+            font-size: 1.5rem;
+
+        }
+    }
+
+    .list-user {
+        padding: 10px 20px 0;
+
+        .item-user {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            margin-bottom: 5px;
+
+            .wrap-img-user {
+                .img-user {
+                    width: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+
+                .avt-user {
+                    padding-top: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .user-name-state {
+                padding-left: 10px;
+
+                .user-name {
+                    font-size: 1.4rem;
+
+                }
+
+                .user-state {
+                    color: #53ca53;
+                }
+            }
+        }
+    }
 }
 
 .wrapper {
@@ -110,6 +169,7 @@ body {
                     width: 35px;
                     border-radius: 50%;
                     overflow: hidden;
+
                     .avt-user {
                         padding-top: 100%;
                         background-repeat: no-repeat;
@@ -132,8 +192,21 @@ body {
                         border-top-right-radius: 20px;
                         border-bottom-right-radius: 20px;
                         border-bottom-left-radius: 20px;
+
                         .content-message {
                             font-size: 1.5rem;
+
+                            &.connected {
+                                font-size: 1.3rem;
+                                color: #37c737;
+                                font-weight: 600;
+                            }
+
+                            &.disconnected {
+                                font-size: 1.3rem;
+                                color: #ec1111;
+                                font-weight: 600;
+                            }
                         }
                     }
 
@@ -181,6 +254,7 @@ body {
                 cursor: pointer;
                 padding: 0px 6px;
                 display: none;
+
                 &:active {
                     opacity: 0.8;
                 }

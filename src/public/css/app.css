@@ -29,6 +29,51 @@ body {
   background-color: #fff;
   border-right: 1px solid #ccc;
 }
+.sidebar .sidebar-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.sidebar .sidebar-header > h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 6px;
+}
+.sidebar .sidebar-header > i {
+  color: #53ca53;
+  font-size: 1.5rem;
+}
+.sidebar .list-user {
+  padding: 10px 20px 0;
+}
+.sidebar .list-user .item-user {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 5px;
+}
+.sidebar .list-user .item-user .wrap-img-user .img-user {
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sidebar .list-user .item-user .wrap-img-user .avt-user {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sidebar .list-user .item-user .user-name-state {
+  padding-left: 10px;
+}
+.sidebar .list-user .item-user .user-name-state .user-name {
+  font-size: 1.4rem;
+}
+.sidebar .list-user .item-user .user-name-state .user-state {
+  color: #53ca53;
+}
 
 .wrapper {
   padding-left: 360px;
@@ -114,6 +159,16 @@ body {
 }
 .wrapper .container .list-message .item-message .box-message .wrap-message .content-message {
   font-size: 1.5rem;
+}
+.wrapper .container .list-message .item-message .box-message .wrap-message .content-message.connected {
+  font-size: 1.3rem;
+  color: #37c737;
+  font-weight: 600;
+}
+.wrapper .container .list-message .item-message .box-message .wrap-message .content-message.disconnected {
+  font-size: 1.3rem;
+  color: #ec1111;
+  font-weight: 600;
 }
 .wrapper .footer {
   position: fixed;

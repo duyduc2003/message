@@ -1,16 +1,23 @@
-import { checkInput } from './util.js'
+import { checkInput, checkUser, listUserOnline } from './util.js'
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
+const listUser = $('.list-user');
 
 const formInput = $('.form-input');
 const chatInput = $('.chat-input');
 const listMessage = $('.list-message');
 const btnSend = $('.btn-send');
 
+console.log(listMessage)
+
 const socket = io();
 
-const userName = prompt('Enter your your name: ');
 // todo - Handle DOM events
+let userName
+do {
+    userName = prompt('Enter your name: ');
+} while (!userName);
 
 formInput.addEventListener('submit', e => {
     e.preventDefault();
@@ -18,13 +25,14 @@ formInput.addEventListener('submit', e => {
     if (message) {
         socket.emit('chat-message', { userName, message });
         chatInput.value = '';
+        chatInput.focus();
     }
-    checkInput(e, btnSend);
+    checkInput(e, btnSend, 'Messenger');
 
 });
 
 chatInput.oninput = e => {
-    checkInput(e, btnSend);
+    checkInput(e, btnSend, 'Messenger');
 }
 
 
@@ -36,7 +44,7 @@ socket.on("connect", () => {
 });
 
 socket.on('chat-message', function (data) {
-    var li = document.createElement('li');
+    const li = document.createElement('li');
     li.classList.add('item-message');
     const html = `
     <div class="wrap-img-user">
@@ -57,15 +65,12 @@ socket.on('chat-message', function (data) {
 });
 
 socket.on('user-connect', nameUser => {
-    // let item = document.createElement('li');
-    // item.textContent = `${nameUser} Connected`;
-    // listMessage.appendChild(item);
-    // chatInput.value = '';
+    checkUser(nameUser, listMessage);
+    listUserOnline(nameUser, listUser)
+    chatInput.value = '';
 })
 
 socket.on('user-disconnect', nameUser => {
-    // let li = document.createElement('li');
-    // li.textContent = `${nameUser} Disconnected`;
-    // listMessage.appendChild(li);
-    // chatInput.value = '';
+    checkUser(nameUser, listMessage, false);
+    chatInput.value = '';
 })
