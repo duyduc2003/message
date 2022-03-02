@@ -16,9 +16,9 @@
   .sidebar .icon-close {
     display: block;
     position: absolute;
-    top: -10px;
-    right: 5px;
-    font-size: 3rem;
+    top: -5px;
+    right: 0px;
+    font-size: 2rem;
     padding: 10px;
     user-select: none;
     cursor: pointer;
