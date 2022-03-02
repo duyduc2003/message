@@ -9,6 +9,11 @@ const chatInput = $('.chat-input');
 const listMessage = $('.list-message');
 const btnSend = $('.btn-send');
 
+const btnUserOnline = $('.btnUserOnline');
+const sidebar = $('.sidebar');
+const layoutSidebar = $('.layout-sidebar');
+const iconClose = $('.icon-close');
+const iconInfo = $('.icon-info');
 
 const socket = io();
 
@@ -34,6 +39,20 @@ chatInput.oninput = e => {
     checkInput(e, btnSend, 'Messenger');
 }
 
+btnUserOnline.onclick = () => {
+    sidebar.classList.toggle('active');
+}
+layoutSidebar.onclick = () => {
+    sidebar.classList.remove('active');
+}
+iconClose.onclick = () => {
+    sidebar.classList.remove('active');
+
+}
+iconInfo.onclick = () => {
+    sidebar.classList.toggle('active');
+
+}
 
 
 // todo - Handle client - server

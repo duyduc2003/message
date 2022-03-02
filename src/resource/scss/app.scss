@@ -34,6 +34,9 @@ body {
 
     background-color: $c-white;
     border-right: 1px solid #ccc;
+    .icon-close{
+        display: none;
+    }
 
     .sidebar-header {
         width: 100%;
@@ -112,6 +115,9 @@ body {
 
         display: flex;
         align-items: center;
+        .icon-info{
+            display: none;
+        }
 
         .img-ground {
             width: 50px;
