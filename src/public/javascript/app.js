@@ -85,11 +85,9 @@ socket.on('chat-message', function (data) {
 socket.on('user-connect', (data) => {
     checkUser(data.name, listMessage);
     listUserOnline(data.userConnect, listUser)
-    chatInput.value = '';
 })
 
 socket.on('user-disconnect', data => {
     checkUser(data.name, listMessage, false);
     listUserOnline(data.userConnect, listUser)
-    chatInput.value = '';
 })
