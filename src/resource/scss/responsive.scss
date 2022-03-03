@@ -1,11 +1,10 @@
 @media (max-width: 1023px) {
-    $width-sidebar: 200px;
+    $width-sidebar: 300px;
     $height-header: 75px;
     $width-mess: 860px;
 
     .sidebar {
         width: $width-sidebar;
-        // display: none;
         z-index: 3;
         left: -100%;
         transition: all ease-in-out 0.1s;
@@ -55,14 +54,16 @@
                 right: 0;
                 font-size: 2.2rem;
                 margin-right: 10px;
+                cursor: pointer;
+            }
+            .img-ground{
+                cursor: pointer;
             }
     
         }
 
         .footer {
-
             left: 0;
-
         }
 
     }

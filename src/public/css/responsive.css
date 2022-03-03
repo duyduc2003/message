@@ -1,6 +1,6 @@
 @media (max-width: 1023px) {
   .sidebar {
-    width: 200px;
+    width: 300px;
     z-index: 3;
     left: -100%;
     transition: all ease-in-out 0.1s;
@@ -52,6 +52,10 @@
     right: 0;
     font-size: 2.2rem;
     margin-right: 10px;
+    cursor: pointer;
+  }
+  .wrapper .header .img-ground {
+    cursor: pointer;
   }
   .wrapper .footer {
     left: 0;
