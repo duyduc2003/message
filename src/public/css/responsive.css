@@ -22,6 +22,7 @@
     padding: 10px;
     user-select: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .layout-sidebar {
@@ -53,12 +54,17 @@
     font-size: 2.2rem;
     margin-right: 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
   .wrapper .header .img-ground {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
   .wrapper .footer {
     left: 0;
+  }
+  .wrapper .footer .form-input .btn-send {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

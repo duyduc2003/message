@@ -8,26 +8,31 @@
         z-index: 3;
         left: -100%;
         transition: all ease-in-out 0.1s;
+
         &.active {
             left: 0;
+
             &+.layout-sidebar {
                 z-index: 2;
                 opacity: 1;
                 transition: all linear 0.1s;
             }
-        
+
         }
-        .icon-close{
+
+        .icon-close {
             display: block;
             position: absolute;
             top: -5px;
-            right:0px;
+            right: 0px;
             font-size: 2rem;
             padding: 10px;
             user-select: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
-    }   
+    }
+
     .layout-sidebar {
         position: fixed;
         top: 0;
@@ -42,10 +47,12 @@
     .wrapper {
         padding-left: 0;
         z-index: 2;
+
         .header {
             left: 0;
             z-index: 1;
-            .icon-info{
+
+            .icon-info {
                 display: block;
                 position: absolute;
                 padding: 12px;
@@ -55,15 +62,25 @@
                 font-size: 2.2rem;
                 margin-right: 10px;
                 cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+
             }
-            .img-ground{
+
+            .img-ground {
                 cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+
             }
-    
+
         }
 
         .footer {
             left: 0;
+              .form-input{
+                .btn-send{
+                    -webkit-tap-highlight-color: transparent;
+                }
+            }
         }
 
     }
